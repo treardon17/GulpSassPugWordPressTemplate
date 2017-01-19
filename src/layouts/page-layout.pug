@@ -1,0 +1,15 @@
+doctype html
+-var cssDir = '/resources/css/styles.css'
+-var wordpressPHP = '<?php echo get_template_directory_uri().\''+cssDir+'\'?>'
+
+html
+    head
+        block title
+            title The title
+        if wordpress == false
+            link(href=`${cssDir}` rel="stylesheet")
+        else
+            |<link href=!{wordpressPHP} rel="stylesheet">
+            
+    body
+        block content
