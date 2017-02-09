@@ -1,0 +1,6 @@
+mixin include-css(path)
+    -var wordpressPHP = '<?php echo get_template_directory_uri().\''+path+'\'?>'
+    if wordpress == false
+        link(href=`${path}` rel="stylesheet")
+    else
+        |<link href=!{wordpressPHP} rel="stylesheet">

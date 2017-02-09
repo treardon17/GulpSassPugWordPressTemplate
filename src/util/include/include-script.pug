@@ -1,0 +1,6 @@
+mixin include-script(path)
+    -var wordpressPHP = '<?php echo get_template_directory_uri().\''+path+'\'?>'
+    if wordpress == false
+        script(src=`${path}` type="text/javascript" defer)
+    else
+        |<script src=!{wordpressPHP} type="text/javascript" defer></script>
