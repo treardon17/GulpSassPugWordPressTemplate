@@ -22,9 +22,9 @@ var argv = require('yargs').argv;
 // ─── GULP PARAMETERS ────────────────────────────────────────────────────────────
 //
 var statics = {
-    wordpress: (argv.wordpress == undefined) ? false : true
+    wordpress: (argv.wordpress == undefined) ? false : true,
+    isPHP: (argv.php == undefined) ? false : true
 }
-var isPHP = (argv.php == undefined) ? false : true;
 // ────────────────────────────────────────────────────────────────────────────────
 
 //
@@ -66,7 +66,7 @@ gulp.task('pug-pages', ()=>{
         pretty: true,
     }))
     .pipe(rename({
-        extname: isPHP ? '.php' : '.html'
+        extname: statics.isPHP ? '.php' : '.html'
     }))
     .pipe(gulp.dest(paths.build.root));
 });
@@ -85,7 +85,7 @@ gulp.task('pug-components', ()=>{
     }))
     .pipe(rename({
         dirname: '',
-        extname: isPHP ? '.php' : '.html'
+        extname: statics.isPHP ? '.php' : '.html'
     }))
     .pipe(gulp.dest(paths.build.partials));
 });
@@ -171,7 +171,7 @@ gulp.task('watch',()=>{
 gulp.task('build', ['sass', 'pug', 'js', 'images', 'php-forms']);
 
 //Default task
-if(isPHP){
+if(statics.isPHP){
     gulp.task('default', ['browser-sync', 'watch']);
 }else{
     gulp.task('default', ['browser-sync-html', 'watch']);

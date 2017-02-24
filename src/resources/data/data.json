@@ -1,20 +1,3 @@
 {
-    "imageSlider":{
-        "images":[
-            {"src": "./resources/images/image-slider/baby.jpg"},
-            {"src": "./resources/images/image-slider/girls.jpg"},
-            {"src": "./resources/images/image-slider/kids.jpg"},
-            {"src": "./resources/images/image-slider/orange_shirt_boy.jpg"}
-        ]
-    },
-    "whoWeAre":{
-        "people":[
-            {"name": "Kim Ferraro", "title": "Executive Director", "phone": "509-323-7480", "photo":"./resources/images/who-we-are/kim_ferraro.png"},
-            {"name": "Stephanie Lewis", "title": "Administrative Services", "phone": "509-323-7486", "photo":"./resources/images/who-we-are/lisa_fuchs.png"},
-            {"name": "Rick Harris", "title": "Facility & Youth Development", "phone": "509-323-7501", "photo":"./resources/images/who-we-are/rick_harris.png"},
-            {"name": "Susan Dias", "title": "Accounting", "phone": "509-323-7481", "photo":"./resources/images/who-we-are/sandi_beckley.png"},
-            {"name": "Sandi Beckley", "title": "Supportive Services", "phone": "509-323-7481", "photo":"./resources/images/who-we-are/stephanie_lewis.png"},
-            {"name": "Lisa Fuchs", "title": "WIC Coordinator", "phone": "509-323-7495", "photo":"./resources/images/who-we-are/susan_dias.png"}
-        ]
-    }
+   
 }
